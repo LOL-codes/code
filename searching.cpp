@@ -75,16 +75,16 @@ int lol(int arr[],int ed,int t){
             return mid;
         }
 
-        if(arr[st]<=arr[mid]){//checks for left sorted array
-            if(arr[st]<=t && t<=arr[mid]){//checking weather the target exist in left sorted array or not 
+        if(arr[st]<=arr[mid]){                 //checks for left sorted array
+            if(arr[st]<=t && t<=arr[mid]){     //checking weather the target exist in left sorted array or not 
                 ed=mid-1;
             }
             else{
                 st=mid+1;
             }
         }
-        else{//right sorted array
-            if(arr[mid]<=t && t<=arr[ed]){//checking weather the target exist in right sorted array or not 
+        else{                                   //right sorted array
+            if(arr[mid]<=t && t<=arr[ed]){      //checking weather the target exist in right sorted array or not 
                 st=mid+1;   
             }
             else{
