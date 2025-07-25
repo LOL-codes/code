@@ -5,20 +5,27 @@ using namespace std;
 
 int main(){
 
-    string n;
-    getline(cin,n);
+    string s;
+    getline(cin,s);
 
-    int r=0;
+        long long int r=0,sign=1;
+        int i=0;
+    while(i<s.length() && s[i]==' ') ++i;
 
-    for(int i=0; i<n.length(); ++i){
-        if(n[i]>='0' && n[i]<='9'){
-            r=r*10+(n[i]-'0');
-        }
-        else{
-            break;
-        }
+    if(i<s.length() && (s[i]=='+'|| s[i]=='-')){
+        sign=(s[i]=='+')?1:-1;
+        ++i;
     }
 
-    cout << r;
+    while(i<s.length() && isdigit(s[i])){
+        r=r*10+(s[i]-'0');
+
+        if(sign==1 && r>INT_MAX) return INT_MAX;
+        if(sign==-1 && -r<INT_MIN) return INT_MIN;
+
+        ++i;
+    }
+
+    cout << sign*r;
 
 }
