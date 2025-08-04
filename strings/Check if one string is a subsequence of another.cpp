@@ -8,7 +8,7 @@ bool fuc(string &n1,string &n2){
 
     while(i<n1.length() && j<n2.length()){
         if(n1[i]==n2[j]){
-            ++i;
+            ++i,++j;
         }
         else{
             ++j;

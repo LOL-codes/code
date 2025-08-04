@@ -58,3 +58,79 @@ int main() {
 //         cout << "}";
 //     }
 // }
+
+//////////////////////////////////////////////////////////////
+
+// Permutations in array with repitation
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void rec(vector<int>& arr, vector<int>& cur, vector<vector<int>>& ans, int k) {
+//     if (cur.size() == k) {
+//         ans.push_back(cur);
+//         return;
+//     }
+
+//     for (int i = 0; i < arr.size(); ++i) {
+//         cur.push_back(arr[i]);         
+//         rec(arr, cur, ans, k);         
+//         cur.pop_back();               
+//     }
+// }
+
+// int main() {
+//     vector<int> arr = {1, 2, 3};
+//     int k = 3; 
+
+//     vector<vector<int>> ans;
+//     vector<int> cur;
+
+//     rec(arr, cur, ans, k);
+
+//     for (auto& v : ans) {
+//         cout << "{";
+//         for (int x : v) cout << x << " ";
+//         cout << "} ";
+//     }
+// }
+
+///////////////////////////////////////////////////////////////////
+
+// Permutations in array with repitation without duplicates
+
+// #include <iostream>
+// #include <set>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// void rec(vector<int>& arr, vector<int>& cur, set<vector<int>>& ans, int k) {
+//     if (cur.size() == k) {
+//         ans.insert(cur);
+//         return;
+//     }
+
+//     for (int i = 0; i < arr.size(); ++i) {
+//         cur.push_back(arr[i]);         
+//         rec(arr, cur, ans, k);         
+//         cur.pop_back();               
+//     }
+// }
+
+// int main() {
+//     vector<int> arr = {1, 2, 3};
+//     set<vector<int>> ans;
+//     vector<int> cur;
+//     int k = 3; 
+//     sort(arr.begin(),arr.end());
+
+//     rec(arr, cur, ans, k);
+
+//     for (auto& v : ans) {
+//         cout << "{";
+//         for (int x : v) cout << x << " ";
+//         cout << "} ";
+//     }
+// }
