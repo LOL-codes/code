@@ -122,3 +122,40 @@ int main() {
 //         cout << "]\n";
 //     }
 // }
+
+///////////////////////////////////////////////////////////////
+
+//combination sum IV
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// void rec(int i, int k, int target, vector<int>& current, vector<vector<int>>& result) {
+//     if (target == 0 && current.size() == k) {
+//         result.push_back(current);
+//         return;
+//     }
+//     if (target < 0 || current.size() > k || i > 9) return;
+
+//     for (int num = i; num <= 9; num++) {
+//         current.push_back(num);
+//         rec(num + 1, k, target - num, current, result);
+//         current.pop_back();
+//     }
+// }
+
+
+// int main() {
+//     int k = 3, n = 7;
+//     vector<vector<int>> result;
+//     vector<int> current;
+
+//     rec(1, k, n, current, result);
+
+//     for (auto& comb : result) {
+//         cout << "[ ";
+//         for (int num : comb) cout << num << " ";
+//         cout << "]\n";
+//     }
+// }
