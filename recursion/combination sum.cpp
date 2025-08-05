@@ -1,4 +1,4 @@
-//combination sum I
+//combination sum I -> it contains all unique elements 
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -12,7 +12,7 @@ void rec(vector<int>& arr, vector<int>& cur, vector<vector<int>>& ans, int t,int
     if(t<0 ||i==arr.size()) return;
 
     cur.push_back(arr[i]);
-    rec(arr,cur,ans,t-arr[i],i);
+    rec(arr,cur,ans,t-arr[i],i); //we will pass i if we want repetation of elemnts else we will pass i+1 
     cur.pop_back();
 
     rec(arr,cur,ans,t,i+1);
@@ -37,7 +37,7 @@ int main() {
 }
 /////////////////////////////////////////////////////////////////
 
-//combinaiton sum II
+//combinaiton sum II -> it contains duplicate elements
 
 // #include <iostream>
 // #include <algorithm>
@@ -56,7 +56,7 @@ int main() {
 //         if(arr[i]>t) break;
 
 //         cur.push_back(arr[i]);
-//         rec(arr, cur, ans ,t-arr[i],i+1);
+//         rec(arr, cur, ans ,t-arr[i],i+1);  //we will pass i if we want repetation of elemnts else we will pass i+1 
 //         cur.pop_back();
 //     }
 
