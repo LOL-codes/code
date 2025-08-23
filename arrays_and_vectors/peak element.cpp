@@ -1,3 +1,5 @@
+//METHOD 1
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -16,6 +18,8 @@ int main(){
 
     cout << ans;
 }
+
+//METHOD 2
 
 // #include <iostream>
 // #include <vector>
@@ -39,4 +43,61 @@ int main(){
 //     }
 
 //     cout << i;
+// }
+
+
+
+
+
+
+//METHOD 3
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int peak(vector<int>&arr){
+//     int l=0,h=arr.size()-1;
+
+//     while(l<=h){
+//         int m=l+(h-l)/2;
+
+//         if(m==0){
+//             if(arr[m]>arr[m+1]){
+//                 return 0;
+//             }
+//             else{
+//                 return 1;
+//             }
+//         }
+//         else if(m==arr.size()-1){
+//             if(arr[m]>arr[m-1]){
+//                 return m;
+//             }
+//             else{
+//                 return m-1;
+//             }
+//         }
+//         else{
+//             if(arr[m]>arr[m+1] && arr[m]>arr[m-1]){
+//                 return m;
+//             }
+//             else if(arr[m]>arr[m-1]){
+//                 l=m+1;
+//             }
+//             else{
+//                 h=m-1;
+//             }
+//         }
+//     }
+
+//     return -1;
+// }
+
+// int main(){
+
+//     vector<int>arr{0,4,1,0};
+
+//     cout << arr[peak(arr)];
+
 // }
